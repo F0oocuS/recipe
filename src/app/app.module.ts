@@ -14,6 +14,7 @@ import { DropdownDirective } from './shared/dropdown.directive';
 import { TestComponent } from './test/test.component';
 import { BoldDirective } from './test/bold.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.sevice';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
 	declarations: [
@@ -31,7 +32,8 @@ import { ShoppingListService } from './shopping-list/shopping-list.sevice';
 		BoldDirective
 	],
 	imports: [
-		BrowserModule
+		BrowserModule,
+		AppRoutingModule
 	],
 	providers: [ShoppingListService],
 	bootstrap: [AppComponent]
