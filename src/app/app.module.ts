@@ -15,6 +15,8 @@ import { TestComponent } from './test/test.component';
 import { BoldDirective } from './test/bold.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.sevice';
 import { AppRoutingModule } from './app-routing.module';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 @NgModule({
 	declarations: [
@@ -25,6 +27,8 @@ import { AppRoutingModule } from './app-routing.module';
 		RecipeDetailComponent,
 		RecipeListComponent,
 		RecipeItemComponent,
+		RecipeStartComponent,
+		RecipeEditComponent,
 		ShoppingListComponent,
 		ShoppingEditComponent,
 		DropdownDirective,

@@ -22,7 +22,7 @@ export class RecipeService {
 		new Recipe(
 			'One more test',
 			'Anouther test',
-			'',
+			'https://wearychef.com/wp-content/uploads/2013/05/buffalo-chicken-wraps-2-2-400x400.jpgs',
 			[
 				new Ingredient('Cheese', 1),
 				new Ingredient('Meat', 2),
@@ -35,6 +35,10 @@ export class RecipeService {
 
 	getRecipe() {
 		return this.recipes.slice();
+	}
+
+	getSingleRecipe(index: number) {
+		return this.recipes[index];
 	}
 
 	addIngredientToShoppingList(ingredients: Ingredient[]) {

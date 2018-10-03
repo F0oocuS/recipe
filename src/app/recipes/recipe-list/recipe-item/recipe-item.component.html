@@ -1,4 +1,9 @@
-<a href="#" class="list-group-item d-flex flex-row mb-2" (click)="onSelected()">
+<a
+	class="list-group-item d-flex flex-row mb-2"
+	style="cursor: pointer;"
+	[routerLink]="[index]"
+	routerLinkActive="active"
+>
 	<div class="d-flex flex-column w-75">
 		<h5 class="mb-1">{{ recipe.name }}</h5>
 
