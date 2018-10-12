@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { DataStorageService } from '../shared/data-storage.service';
 
 @Component({
@@ -14,8 +15,7 @@ export class HeaderComponent {
 			console.log(response);
 		});
 	}
-/*
 	onFetchData() {
 		this.dataStorage.getRecipes();
-	}*/
+	}
 }
