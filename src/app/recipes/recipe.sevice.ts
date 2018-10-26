@@ -30,14 +30,8 @@ export class RecipeService {
 	constructor(private slService: ShoppingListService) {}
 
 	setRecipes(recipes: Recipe[]) {
-		console.log(recipes);
-		console.log(this.recipes);
-		debugger;
 		this.recipes = recipes;
-		console.log(this.recipes);
 		this.recipesChanged.next(this.recipes.slice());
-		console.log(this.recipes);
-		console.log(recipes);
 	}
 
 	getRecipe() {
