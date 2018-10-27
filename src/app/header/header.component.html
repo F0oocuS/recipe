@@ -8,7 +8,18 @@
 				<li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="/shopping-list">Shopping list</a></li>
 			</ul>
 
-			<div class="btn-group">
+			<ng-template [ngIf]="!authService.isAuthenticated()">
+				<div class="btn-group mr-2">
+					<button class="btn btn-outline-dark" type="button" routerLink="/signup">Register</button>
+					<button class="btn btn-outline-dark" type="button" routerLink="/signin">Login</button>
+				</div>
+			</ng-template>
+
+			<div class="btn-group mr-2" (click)="onLogOut()"  *ngIf="authService.isAuthenticated()">
+				<button class="btn btn-outline-dark" type="button">Log Out</button>
+			</div>
+
+			<div class="btn-group" *ngIf="authService.isAuthenticated()">
 				<button class="btn btn-success" type="button" (click)="onSaveData()">Save Data</button>
 				<button class="btn btn-secondary" type="button" (click)="onFetchData()">Fetch Data</button>
 			</div>
