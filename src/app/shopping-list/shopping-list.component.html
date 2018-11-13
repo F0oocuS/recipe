@@ -4,7 +4,7 @@
 		<hr>
 		<div class="list-group">
 			<a
-				*ngFor="let ingredient of ingredients; let i = index"
+				*ngFor="let ingredient of (shoppingListState | async).ingredients; let i = index"
 				class="mb-1 list-group-item d-flex justify-content-between align-items-center"
 				(click)="onEditItem(i)"
 			>

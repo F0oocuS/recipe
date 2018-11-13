@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { StoreModule } from '@ngrx/store';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -25,6 +27,8 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { AuthService } from './auth/auth.service';
 import { AuthGuardService } from './auth/auth-guard.service';
+
+import { shoppingListReducer } from './shopping-list/store/shopping-list.reducers';
 
 @NgModule({
 	declarations: [
@@ -50,7 +54,8 @@ import { AuthGuardService } from './auth/auth-guard.service';
 		FormsModule,
 		HttpClientModule,
 		AppRoutingModule,
-		ReactiveFormsModule
+		ReactiveFormsModule,
+		StoreModule.forRoot({shoppingList: shoppingListReducer})
 	],
 	providers: [ShoppingListService, RecipeService, DataStorageService, AuthService, AuthGuardService],
 	bootstrap: [AppComponent]
