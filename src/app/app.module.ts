@@ -17,7 +17,6 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { DropdownDirective } from './shared/dropdown.directive';
 import { TestComponent } from './test/test.component';
 import { BoldDirective } from './test/bold.directive';
-import { ShoppingListService } from './shopping-list/shopping-list.sevice';
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
@@ -57,7 +56,7 @@ import { shoppingListReducer } from './shopping-list/store/shopping-list.reducer
 		ReactiveFormsModule,
 		StoreModule.forRoot({shoppingList: shoppingListReducer})
 	],
-	providers: [ShoppingListService, RecipeService, DataStorageService, AuthService, AuthGuardService],
+	providers: [RecipeService, DataStorageService, AuthService, AuthGuardService],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }
